@@ -1,5 +1,2 @@
-# ElphineBot
-Multifunctional Discord Bot in JS
-
-
-Thinking of rewriting in Eris!
+# Elphine
+Discord bot made by Hebsi#3789
