@@ -5,6 +5,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const config = require("./config.json");
 
 client.config = config;
+client.slashCommands = new Collection();
 client.commands = new Collection();
 
 client.once('ready', () => {
