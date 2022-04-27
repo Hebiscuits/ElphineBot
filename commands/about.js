@@ -1,4 +1,7 @@
 const { Client, Message, MessageEmbed } = require('discord.js');
+const moment = require("moment");
+
+require("moment-duration-format");
 
 module.exports = {
     name: 'about',
@@ -8,6 +11,8 @@ module.exports = {
      * @param {Stright[]} string
      */
     run: async(client, message) => {
+        const uptime = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs] ");
+        const footer = `${message.author.username} | Shard ${message.channel.guild.shardId} | Uptime ${uptime}`;
         const embed = new MessageEmbed()
             .setAuthor({name: `${client.user.tag}`, iconURL: `${client.user.avatarURL()}`})
             .setColor('BLURPLE')
@@ -18,7 +23,7 @@ module.exports = {
             .addField('Users ', `${client.users.cache.size}`, true)
             .addField('Server Users', `${message.guild.memberCount}`, true)
             .setThumbnail(`${client.user.avatarURL()}`)
-            .setFooter({ text: `Requested By ${message.author.tag}`})
+            .setFooter({text: footer})
             .setTimestamp()
 
         message.channel.send({embeds: [embed]})
