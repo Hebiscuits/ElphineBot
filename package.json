@@ -1,0 +1,22 @@
+{
+  "name": "elphinebot",
+  "version": "1.0.0",
+  "description": "Discord bot made by Hebsi#3789",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hebsu/ElphineBot.git"
+  },
+  "author": "Hebsu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hebsu/ElphineBot/issues"
+  },
+  "homepage": "https://github.com/Hebsu/ElphineBot#readme",
+  "dependencies": {
+    "eris": "^0.16.1"
+  }
+}
